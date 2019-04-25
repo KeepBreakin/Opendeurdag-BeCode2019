@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <title>BeCode Opendeurdag</title>
+  </head>
+  <body>
+    <div class="header"></div>
+
+    <div id="editor">
+      <ul id="insert_buttons"></ul>
+      <div id="creation_window">
+        <div class="wrapper">
+          <textarea
+            name="element_content"
+            id="element_content"
+            cols="50"
+            rows="19"
+          ></textarea>
+          <div id="element_preview"></div>
+          <button id="add_new">Add</button>
+          <button id="cancel_new">Cancel</button>
+          <hr style="border:1px dashed #2dabf9  ;" />
+          <ul id="created_elements"></ul>
+        </div>
+        <div class="exElement">
+          <i class="fas fa-info-circle"></i>
+          <hr style="border:1px dashed #2dabf9  ;" />
+          <ul id="exercise_elements">
+            <!-- Write your exercise here -->
+            <!-- Be sure to wrap every element in an <li> tag-->
+            <li><h1>Welkom bij Becode!</h1></li>
+            <li><h2>De nieuwe opleiding in het dagonderwijs</h2></li>
+            <li><h3>We wachten op jou!</h3></li>
+            <li><p>In code we trust</p></li>
+
+            <li>
+              <ol>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ol>
+            </li>
+
+            <li>
+              <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ul>
+            </li>
+            
+            
+
+            <li>
+              <img
+                src="https://www.becode.org/register/assets/images/logo_Becode.png"
+                alt="BecodeLogo"
+                width="60"
+                height="60"
+                ;
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

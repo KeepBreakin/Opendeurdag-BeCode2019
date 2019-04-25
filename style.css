@@ -1,0 +1,311 @@
+@-webkit-keyframes textarea {
+  0% {
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes textarea {
+  0% {
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #245060;
+  padding: 0;
+  margin: 0;
+}
+
+.bad,
+.good,
+.great {
+  margin: 10px 0px;
+  padding: 12px;
+}
+
+.great {
+  color: #4f8a10;
+  background-color: #dff2bf;
+  border: 2px solid green;
+}
+.good {
+  color: #9f6000;
+  background-color: #feefb3;
+  border: 2px solid orange;
+}
+.bad {
+  color: #d8000c;
+  background-color: #ffd2d2;
+  border: 2px solid red;
+}
+
+#creation_window {
+  display: flex;
+  justify-content: space-around;
+}
+
+#insert_buttons {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#editor {
+  margin: 20px 20px 0px 20px;
+}
+
+.header {
+  height: 5px;
+  background: #2dabf9;
+}
+
+ul#exercise_elements {
+  padding: 0;
+  margin-left: 25px;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul#exercise_elements li h1 {
+  margin-top: 0;
+}
+
+#exercise_elements > li {
+  margin: 10px 0px;
+}
+
+.exElement {
+  color: #245060;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 5px;
+  height: 530px;
+  width: 300px;
+  background-color: #bde5f8;
+  margin-right: 45px;
+  border-radius: 6px;
+  position: sticky;
+  top: 0;
+}
+
+ul#insert_buttons button > * {
+  display: flex;
+  align-content: space-around;
+}
+
+ul#insert_buttons li > * {
+  border-radius: 6px;
+  -moz-box-shadow: inset 0px -3px 7px 0px #2dabf9;
+  -webkit-box-shadow: inset 0px -3px 7px 0px #2dabf9;
+  box-shadow: inset 0px -3px 7px 0px #2dabf9;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #2dabf9),
+    color-stop(1, #2dabf9)
+  );
+  background: -moz-linear-gradient(top, #2dabf9 5%, #2dabf9 100%);
+  background: -webkit-linear-gradient(top, #2dabf9 5%, #2dabf9 100%);
+  background: -o-linear-gradient(top, #2dabf9 5%, #2dabf9 100%);
+  background: -ms-linear-gradient(top, #2dabf9 5%, #2dabf9 100%);
+  background: linear-gradient(to bottom, #2dabf9 5%, #2dabf9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#2dabf9',GradientType=0);
+  background-color: #2dabf9;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
+}
+ul#insert_buttons li:hover > * {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #2dabf9),
+    color-stop(1, #2dabf9)
+  );
+  background: -moz-linear-gradient(top, #2dabf9 5%, #2dabf9 100%);
+  background: -webkit-linear-gradient(top, #2dabf9 5%, #2dabf9 100%);
+  background: -o-linear-gradient(top, #2dabf9 5%, #2dabf9 100%);
+  background: -ms-linear-gradient(top, #2dabf9 5%, #2dabf9 100%);
+  background: linear-gradient(to bottom, #2dabf9 5%, #2dabf9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#2dabf9',GradientType=0);
+  border-color: currentColor;
+  background-color: white;
+}
+ul#insert_buttons li:active > * {
+  position: relative;
+  top: 1px;
+}
+
+#cancel_new {
+  -moz-box-shadow: inset 0px 1px 0px 0px #cf866c;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #cf866c;
+  box-shadow: inset 0px 1px 0px 0px #cf866c;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #ffc477),
+    color-stop(1, #e68610)
+  );
+  background: -moz-linear-gradient(top, #ffc477 5%, #e68610 100%);
+  background: -webkit-linear-gradient(top, #ffc477 5%, #e68610 100%);
+  background: -o-linear-gradient(top, #ffc477 5%, #e68610 100%);
+  background: -ms-linear-gradient(top, #ffc477 5%, #e68610 100%);
+  background: linear-gradient(to bottom, #ffc477 5%, #e68610 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#e68610',GradientType=0);
+  background-color: #ffc477;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #942911;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #854629;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-weight: bold;
+}
+#cancel_new:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #e68610),
+    color-stop(1, #ffc477)
+  );
+  background: -moz-linear-gradient(top, #e68610 5%, #ffc477 100%);
+  background: -webkit-linear-gradient(top, #e68610 5%, #ffc477 100%);
+  background: -o-linear-gradient(top, #e68610 5%, #ffc477 100%);
+  background: -ms-linear-gradient(top, #e68610 5%, #ffc477 100%);
+  background: linear-gradient(to bottom, #e68610 5%, #ffc477 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e68610', endColorstr='#ffc477',GradientType=0);
+  background-color: #e68610;
+  border-color: currentColor;
+  background-color: white;
+}
+#cancel_new:active {
+  position: relative;
+  top: 1px;
+  transform: translateY(1px);
+  filter: saturate(150%);
+  color: black;
+}
+
+#add_new {
+  -moz-box-shadow: inset 0px 1px 0px 0px #9acc85;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #9acc85;
+  box-shadow: inset 0px 1px 0px 0px #9acc85;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #74ad5a),
+    color-stop(1, #68a54b)
+  );
+  background: -moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+  background: -webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+  background: -o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+  background: -ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+  background: linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+  background-color: #74ad5a;
+  border: 1px solid #3b6e22;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+#add_new:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #68a54b),
+    color-stop(1, #74ad5a)
+  );
+  background: -moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+  background: -webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+  background: -o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+  background: -ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+  background: linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+
+  border-color: currentColor;
+  background-color: white;
+}
+#add_new:active {
+  position: relative;
+  top: 1px;
+}
+
+#element_preview {
+  color: white;
+}
+
+textarea {
+  border: 1px solid black;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  border-radius: 6px;
+  background-color: whitesmoke;
+  -webkit-animation: textarea 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: textarea 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+​ .wrapper {
+  height: 300px;
+  margin-left: 45px;
+}
+
+#created_elements {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul#exercise_elements ol {
+  padding-left: 15px;
+}
+ul#exercise_elements ul {
+  padding-left: 15px;
+}
+
+.fas.fa-info-circle {
+  margin-right: 10px;
+}
